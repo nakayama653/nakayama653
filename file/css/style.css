@@ -1,0 +1,171 @@
+﻿@charset "utf-8";
+
+/* 共通 */
+/* flex */
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (min-width:520px) {
+
+    /* 画面サイズが520pxからはここを読み込む */
+    .flex_over520px {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+/* 全体 */
+body {
+    background: gainsboro;
+}
+
+@media screen and (max-width:520px) {
+
+    /* 画面サイズが520pxまではここを読み込む */
+    body {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:520px) {
+
+    /* 画面サイズが520pxからはここを読み込む */
+    header,
+    main,
+    footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/* リンクの設定 */
+a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    background: #999;
+    border: solid 1px #fff;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: gray;
+    background: #fff;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+nav ul li {
+    width: 30%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+/* container */
+#container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+}
+
+/* header */
+header {
+    /*background: lemonchiffon;*/
+    padding-top: 3%;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+/* main */
+main {
+    width: 80%;
+    margin: 10px auto;
+}
+
+main h2 {
+    border-bottom: solid 1px dimgray;
+    font: italic 1.2em "Fira Sans", serif;
+}
+
+s @media screen and (min-width:520px) {
+
+    /* 画面サイズが520pxからはここを読み込む */
+    main h2 {
+        padding-left: 5%;
+    }
+}
+
+main section {
+    margin: 30px;
+    margin-bottom: 100px;
+}
+
+main #about p {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+main section h2 {
+    margin-bottom: 30px;
+}
+
+main #works ul {
+    text-align: center;
+}
+
+
+main #works .banner ul li,
+main #works .logo ul li {
+    margin: 10px auto 30px;
+    border: 1px solid dimgray;
+}
+
+main section ul li {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+main .flex_after::after {
+    content: "";
+    display: block;
+    width: 20%;
+}
+
+/* footer */
+footer {
+    /*background: tan;*/
+    width: 100%;
+    text-align: center;
+    padding-bottom: 100px;
+    font-size: px;
+    position: relative;
+}
+
+.to_index {
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+#pagetop {
+    margin: 0;
+    margin-left: 375px;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    background-color: #010101;
+}
