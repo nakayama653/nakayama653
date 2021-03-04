@@ -1,0 +1,747 @@
+﻿@charset "utf-8";
+/* 共通設定 */
+
+/* リンクの挙動 */
+a {
+    transition: 0.5s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* #container */
+#container {
+    max-width: 960px;
+    margin: auto;
+}
+
+/* flex */
+/* 画面サイズによらず共通 */
+.flex {
+    display: flex;
+}
+
+.flex-space-around {
+    justify-content: space-around;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+/* 画面サイズが520まではここを読み込む */
+@media screen and (max-width:519px) {
+    .flex_since520px {
+        display: flex;
+    }
+}
+
+/* 画面サイズが520から960まではここを読み込む */
+@media screen and (min-width:520px) and (max-width:959px) {
+    .flex_over520px {
+        display: flex;
+    }
+}
+
+/* 画面サイズが960からはここを読み込む */
+@media screen and (min-width:959px) {
+    .flex_over960px {
+        display: flex;
+    }
+}
+
+/* 画像のフルードイメージ化 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* header */
+header {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 90px;
+    height: 90px;
+}
+
+header .nav {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 90px;
+    margin-right: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    background-color: #fff;
+}
+
+header h1 {
+    margin-left: 30px;
+    color: #fff;
+}
+
+header h1 a {
+    display: block;
+    background-color: #66330e;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header h1 a:hover {
+    background-color: firebrick;
+}
+
+header .normal-nav a:hover {
+    opacity: 0;
+}
+
+header .link_top {
+    background: url("../img/top_hover.png") no-repeat;
+}
+
+header .link_about {
+    background: url("../img/about_hover.png") no-repeat;
+}
+
+header .link_menu {
+    background: url("../img/menu_hover.png") no-repeat;
+}
+
+header .link_shipping {
+    background: url("../img/shipping_hover.png") no-repeat;
+}
+
+header .link_special {
+    background: url("../img/special_hover.png") no-repeat;
+}
+
+header .link_access {
+    background: url("../img/access_hover.png") no-repeat;
+}
+
+.hero {
+    background: #d5891c url(../img/hero1.jpg) no-repeat center center / cover;
+    height: calc(100vh - 90px);
+}
+
+/* main */
+main {
+    font-family: 'Shippori Mincho', serif;
+    text-align: center;
+}
+
+main h2 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 30px;
+}
+
+main .sub_h2 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+main .message {
+    margin-top: 30px;
+}
+
+main .content {
+    margin-top: 100px;
+    position: relative;
+    /*相対配置*/
+    line-height: 50px;
+}
+
+main .lead {
+    margin-top: 30px;
+}
+
+main a {
+    transition: 0.5s;
+}
+
+main a:hover img {
+    opacity: 0.8;
+}
+
+.content .title_link {
+    position: absolute;
+    /*絶対配置*/
+    font-size: 50px;
+    letter-spacing: 5px;
+    color: white;
+    /*文字は白に*/
+    opacity: 0.9;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+main .subtitle_link {
+    font-size: 25px;
+    border-bottom: 1px solid #fff;
+}
+
+a:hover .content .title_link,
+a:hover .content .subtitle_link {
+    opacity: 1;
+}
+
+/* 個別のページ・準備中の記述 */
+main .page {
+    text-align: center;
+    margin: 100px auto 50px;
+}
+
+main .comming-soon {
+    text-align: center;
+    margin: 200px auto 200px;
+}
+
+main .page .text {
+    margin-top: 50px;
+    margin-right: 10px;
+}
+
+/* main about */
+.about_page figure {
+    margin: 10px;
+}
+
+@media screen and (min-width: 560px) {
+    .about_page {
+        display: flex;
+    }
+
+    .about_page figure {
+        margin-right: 30px;
+    }
+}
+
+/* main menu */
+main .menu_page .menu1,
+main .menu_page .menu2,
+main .menu_page .menu3,
+main .menu_page .menu4 {
+    min-width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+main .menu_page h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+main .menu_dl {
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+main .menu_dl dl {
+    width: 50%;
+    text-align: center;
+}
+
+main .menu_dl dt {
+    padding-top: 10px;
+}
+
+main .menu_dl dd {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* main shipping */
+.shipping_page {
+    text-align: left;
+}
+
+form {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.lead-form {
+    font-size: 20px;
+}
+
+
+.item {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.label {
+    width: 30%;
+}
+
+.inputs {
+    width: 70%;
+    padding-left: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="address"],
+select {
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+textarea {
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    height: 160px;
+    font-size: 15px;
+}
+
+.btn-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color: firebrick;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #66330e;
+    transition: 0.5s;
+}
+
+input[type="reset"] {
+    background: #aaa;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+input[type="reset"]:hover {
+    background-color: #555;
+    transition: 0.5s;
+}
+
+/* main special */
+.special_page {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.special_page h3 {
+    padding-top: 80px;
+    font-size: 1.5em;
+    border-bottom: 1px solid #aaa;
+}
+
+.special_page .special_period {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.special_page .special_text {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.special_page ul li p {
+    width: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.special_page ul li img {
+    width: 50%;
+}
+
+.special_page img {
+    object-fit: cover;
+}
+
+@media screen and (max-width: 559px) {
+    .special_page img {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 560px) {
+
+    /* 奇数の行に対して指定 */
+    .special_page li:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .special_page .spacial_content {
+        width: 50%;
+        margin-top: 200px;
+    }
+
+    .special_page .special_text {
+        margin-top: 50px;
+    }
+}
+
+/* main access */
+.access_page {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.access_page dl dd {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 560px) {
+
+    .access_page dt {
+        margin-top: 30px;
+    }
+
+    .access_page dl dd {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 561px) {
+
+    .access_page dl {
+        margin-top: 30px;
+    }
+
+    .access_page dt {
+        margin-right: 60px;
+    }
+}
+
+.access_page .address_number dt,
+.access_page .address_number dd {
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.map {
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* footer */
+footer {
+    background-color: #66330e;
+    margin-top: 150px;
+    padding-top: 30px;
+    color: #fff;
+    padding-bottom: 30px;
+}
+
+footer .icons a {
+    border: 3px solid #66330e;
+    padding: 10px;
+}
+
+footer .icons a:hover {
+    color: #d5891c;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+footer .dl_access dt {
+    margin-right: 5px;
+}
+
+footer .dl_access dd {
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width:960px) {
+    footer .dl_access {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width:960px) {
+    footer .dl_access {
+        margin-right: 15px;
+    }
+}
+
+footer .copy {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+
+
+
+/* 通常のナビ */
+.normal-nav {
+    display: none;
+}
+
+
+/* 画面サイズが960からはここを読み込む */
+@media screen and (min-width:960px) {
+    .normal-nav {
+        display: flex;
+        color: #555;
+    }
+
+    .normal-nav ul li {
+        color: #555;
+    }
+}
+
+
+@media screen and (min-width:960px) {
+    #nav-drawer {
+        display: none;
+    }
+}
+
+/* ナビゲーションドロワー */
+#nav-drawer {
+    position: relative;
+    margin: 5px;
+    font-family: 'Shippori Mincho', serif;
+}
+
+/* チェックボックス等は非表示に */
+.nav-unshown {
+    display: none;
+}
+
+/* アイコンのスペース */
+#nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* ナビゲーションドロワーここまで */
+
+
+/* ハンバーガーアイコン */
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+    position: absolute;
+    height: 3px;
+    /*線の太さ*/
+    width: 30px;
+    /*長さ*/
+    border-radius: 3px;
+    background: #555;
+    display: block;
+    content: '';
+    cursor: pointer;
+}
+
+#nav-open span:before {
+    bottom: -8px;
+}
+
+#nav-open span:after {
+    bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+    display: none;
+    /*はじめは隠しておく*/
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    /*全体に広がるように*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d5891c;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /*最前面に*/
+    width: 90%;
+    /*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 330px;
+    /*最大幅（調整してください）*/
+    height: 100%;
+    background: #fff;
+    /*背景色*/
+    transition: .3s ease-in-out;
+    /*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+    /*左に隠しておく*/
+    color: #666;
+}
+
+#nav-content ul li {
+    border-bottom: 1px dotted #666;
+}
+
+#nav-content ul li a:hover {
+    background-color: #ebebeb;
+    color: #000;
+}
+
+#nav-content ul li a {
+    display: block;
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+    display: block;
+    /*カバーを表示*/
+    opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    /*中身を表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+}
+
+/*ハンバーガーアイコンここまで*/
+
+
+/* アイコン */
+.icons li {
+    padding: 3%;
+}
+
+.icons li a {
+    font-size: 2em;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?aw8t45');
+    src: url('fonts/icomoon.eot?aw8t45#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?aw8t45') format('truetype'),
+        url('fonts/icomoon.woff?aw8t45') format('woff'),
+        url('fonts/icomoon.svg?aw8t45#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook2:before {
+    content: "\ea91";
+}
+
+.icon-instagram:before {
+    content: "\ea92";
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+}
+
+.icon-pinterest:before {
+    content: "\ead1";
+}
+
+/* アイコンここまで */
+
+/* フェードイン */
+/* 画面外にいる状態 */
+.fadein {
+    opacity: 0.1;
+    transform: translate(0, 50px);
+    transition: all 500ms;
+}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* map */
+.map {
+    position: relative;
+    margin: 2%;
+    padding-top: 50%;
+}
+
+.map iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ポートフォリオへの復帰ボタン */
+#to_portfolio {
+    background-color: azure;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    color: black;
+    text-align: center;
+}
+
+#to_portfolio a {
+    display: block;
+}
