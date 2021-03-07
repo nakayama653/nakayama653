@@ -102,7 +102,7 @@ main h2 {
     font: italic 1.2em "Fira Sans", serif;
 }
 
-s @media screen and (min-width:520px) {
+@media screen and (min-width:520px) {
 
     /* 画面サイズが520pxからはここを読み込む */
     main h2 {
@@ -138,6 +138,21 @@ main #works .logo ul li {
 main section ul li {
     padding-top: 3%;
     padding-bottom: 3%;
+}
+
+main #works dl {
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+main #works dl dt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main #works dl dd {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 main .flex_after::after {
