@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>site6 #todo</title>
+    <meta name="description" content="#todo">
+    <meta name="keywords" content="#todo">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- icons -->
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/reset.css?202103091747" media="all">
+    <link rel="stylesheet" href="css/style.css?202103091747" media="all">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                $('.fadein').each(function() {
+                    var elemPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight + 200) {
+                        $(this).addClass('scrollin');
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="gnav">
+            <h1><a href="index.html">site6 #todo</a></h1>
+            <nav>
+                <div id="nav-drawer">
+                    <input id="nav-input" type="checkbox" class="nav-unshown">
+                    <label id="nav-open" for="nav-input"><span></span></label>
+                    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                    <div id="nav-content">
+                        <ul>
+                            <li><a href="page.html">1</a></li>
+                            <li><a href="page.html">2</a></li>
+                            <li><a href="page.html">3</a></li>
+                            <li><a href="page.html">4</a></li>
+                            <li><a href="page.html">5</a></li>
+                            <li><a href="page.html">6</a></li>
+                            <li><a href="page.html">7</a></li>
+                            <li><a href="page.html">8</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="normal-nav flex">
+                    <li class="link_top"><a href="page.html">1</a></li>
+                    <li class="link_about"><a href="page.html">2</a></li>
+                    <li class="link_menu"><a href="page.html">3</a></li>
+                    <li class="link_menu"><a href="page.html">4</a></li>
+                    <li class="link_menu"><a href="page.html">5</a></li>
+                    <li class="link_menu"><a href="page.html">6</a></li>
+                    <li class="link_menu"><a href="page.html">7</a></li>
+                    <li class="link_menu"><a href="page.html">8</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="container">
+        <main class="top_page">
+            <section class="top_message">
+                <h2>#todo</h2>
+                <p class="message">#todo</p>
+            </section>
+            <div class="top_content_column">
+                <a href="page.html">
+                    <div class="top_content fadein">
+                        <img src="img/gift01.jpg" width="400" height="250" alt="1">
+                        <p class="title_link">#todo<br><span class="subtitle_link">1</span></p>
+                    </div>
+                    <p class="lead fadein">#todo</p>
+                </a>
+                <a href="page.html">
+                    <div class="top_content fadein">
+                        <img src="img/gift01.jpg" width="400" height="250" alt="1">
+                        <p class="title_link">#todo<br><span class="subtitle_link">2</span></p>
+                    </div>
+                    <p class="lead fadein">#todo</p>
+                </a>
+            </div>
+            <div class="top_content_column">
+                <a href="page.html">
+                    <div class="top_content fadein">
+                        <img src="img/gift01.jpg" width="400" height="250" alt="1">
+                        <p class="title_link">#todo<br><span class="subtitle_link">3</span></p>
+                    </div>
+                    <p class="lead fadein">#todo</p>
+                </a>
+                <a href="page.html">
+                    <div class="top_content fadein">
+                        <img src="img/gift01.jpg" width="400" height="250" alt="1">
+                        <p class="title_link">#todo<br><span class="subtitle_link">4</span></p>
+                    </div>
+                    <p class="lead fadein">#todo</p>
+                </a>
+            </div>
+            <div class="top_content_column">
+                <a href="page.html">
+                    <div class="top_content fadein">
+                        <img src="img/gift01.jpg" width="400" height="250" alt="1">
+                        <p class="title_link">#todo<br><span class="subtitle_link">5</span></p>
+                    </div>
+                    <p class="lead fadein">#todo</p>
+                </a>
+                <a href="page.html">
+                    <div class="top_content fadein">
+                        <img src="img/gift01.jpg" width="400" height="250" alt="1">
+                        <p class="title_link">#todo<br><span class="subtitle_link">6</span></p>
+                    </div>
+                    <p class="lead fadein">#todo</p>
+                </a>
+            </div>
+            <div class="top_content_column">
+                <a href="page.html">
+                    <div class="top_content fadein">
+                        <img src="img/gift01.jpg" width="400" height="250" alt="1">
+                        <p class="title_link">#todo<br><span class="subtitle_link">7</span></p>
+                    </div>
+                    <p class="lead fadein">#todo</p>
+                </a>
+                <a href="page.html">
+                    <div class="top_content fadein">
+                        <img src="img/gift01.jpg" width="400" height="250" alt="1">
+                        <p class="title_link">#todo<br><span class="subtitle_link">8</span></p>
+                    </div>
+                    <p class="lead fadein">#todo</p>
+                </a>
+            </div>
+        </main>
+    </div><!-- #container END -->
+    <footer>
+        <p class="copy"><small>Copyright &copy; 2021 y_nakayam</small></p>
+        <div id="to_portfolio"><a href="../index.html">ポートフォリオへ戻る</a></div>
+    </footer>
+</body>
+
+</html>

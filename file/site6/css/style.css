@@ -1,0 +1,433 @@
+﻿@charset "utf-8";
+/* 共通設定 */
+
+/* リンクの挙動 */
+a {
+    transition: 0.5s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* #container */
+#container {
+    max-width: 960px;
+    margin: 50px auto;
+}
+
+
+/* 画像のフルードイメージ化 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* header */
+header {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 90px;
+    height: 90px;
+}
+
+header .gnav {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 90px;
+    margin-right: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin-left: 30px;
+    color: #fff;
+}
+
+header h1 a {
+    display: block;
+    background-color: #6DB8DE;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header h1 a:hover {
+    background-color: #84B2F5;
+}
+
+header .normal-nav a {
+    padding: 0 50px;
+    height: 90px;
+    display: block;
+    background-color: azure;
+}
+
+header .normal-nav a:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+/* main */
+main {
+    font-family: 'Shippori Mincho', serif;
+    text-align: center;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+main .sub_h2 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+main .message {
+    margin-top: 30px;
+}
+
+main .top_content {
+    margin-top: 100px;
+    position: relative;
+    /*相対配置*/
+    line-height: 50px;
+}
+
+main .lead {
+    margin-top: 30px;
+}
+
+main a {
+    transition: 0.5s;
+}
+
+main a:hover img {
+    opacity: 0.8;
+}
+
+.top_content_column {
+    display: flex;
+    justify-content: space-around;
+}
+
+.top_content {
+    padding: 5%;
+}
+
+/* 画像の上の文字 */
+.top_content .title_link {
+    position: absolute;
+    /*絶対配置*/
+    font-size: 50px;
+    letter-spacing: 5px;
+    color: white;
+    /*文字は白に*/
+    opacity: 0.9;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 10px;
+}
+
+.top_content .subtitle_link {
+    font-size: 25px;
+    border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 520px) {
+    .top_content .title_link {
+        font-size: 1.5em;
+    }
+
+    main .subtitle_link {
+        font-size: 0.5em;
+    }
+}
+
+a:hover .top_content .title_link,
+a:hover .top_content .subtitle_link {
+    opacity: 1;
+}
+
+/* 個別のページ */
+
+/* page_container */
+@media screen and (min-width: 520px) {
+    .page_container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .page_container main {
+        width: 70%;
+    }
+
+    .page_container aside {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .page_container aside {
+        margin-top: 30px;
+    }
+
+    aside .aside-nav li a {
+        border-radius: 100px;
+    }
+}
+
+/* main page */
+.page {
+    padding: 0 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.page .text {
+    margin-right: 10px;
+}
+
+.page h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.page figure {
+    margin: 10px;
+}
+
+.page .page_content {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.page .philosophy {
+    background-color: #cc936b;
+}
+
+.page .organic {
+    background-color: #f0ffd4;
+}
+
+.page .hygiene {
+    background-color: azure;
+}
+
+/* aside */
+aside .aside-nav {
+    text-align: center;
+}
+
+aside .aside-nav li {
+    font-family: 'Dancing Script', cursive;
+}
+
+aside .aside-nav a {
+    display: block;
+    background-color: #5DB8F5;
+    margin: 10px 10px 0;
+    padding: 10px 20px;
+}
+
+aside .aside-nav a:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+/* footer */
+footer {
+    background-color: #02A7D4;
+    margin-top: 150px;
+    padding-top: 30px;
+    color: #fff;
+    padding-bottom: 30px;
+}
+
+footer .copy {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+/* 通常のナビ */
+.normal-nav {
+    display: none;
+}
+
+@media screen and (min-width:960px) {
+    .normal-nav {
+        display: flex;
+        color: #555;
+    }
+
+    .normal-nav ul li {
+        color: #555;
+    }
+}
+
+@media screen and (min-width:960px) {
+    #nav-drawer {
+        display: none;
+    }
+}
+
+/* ナビゲーションドロワー */
+#nav-drawer {
+    position: relative;
+    margin: 5px;
+    font-family: 'Shippori Mincho', serif;
+}
+
+/* チェックボックス等は非表示に */
+.nav-unshown {
+    display: none;
+}
+
+/* アイコンのスペース */
+#nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* ナビゲーションドロワーここまで */
+
+
+/* ハンバーガーアイコン */
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+    position: absolute;
+    height: 3px;
+    /*線の太さ*/
+    width: 30px;
+    /*長さ*/
+    border-radius: 3px;
+    background: #555;
+    display: block;
+    content: '';
+    cursor: pointer;
+}
+
+#nav-open span:before {
+    bottom: -8px;
+}
+
+#nav-open span:after {
+    bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+    display: none;
+    /*はじめは隠しておく*/
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    /*全体に広がるように*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d5891c;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /*最前面に*/
+    width: 90%;
+    /*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 330px;
+    /*最大幅（調整してください）*/
+    height: 100%;
+    background: #fff;
+    /*背景色*/
+    transition: .3s ease-in-out;
+    /*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+    /*左に隠しておく*/
+    color: #666;
+}
+
+#nav-content ul li {
+    border-bottom: 1px dotted #666;
+}
+
+#nav-content ul li a:hover {
+    background-color: #ebebeb;
+    color: #000;
+}
+
+#nav-content ul li a {
+    display: block;
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+    display: block;
+    /*カバーを表示*/
+    opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    /*中身を表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+}
+
+/*ハンバーガーアイコンここまで*/
+
+/* フェードイン */
+/* 画面外にいる状態 */
+.fadein {
+    opacity: 0.1;
+    transform: translate(0, 50px);
+    transition: all 500ms;
+}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* ポートフォリオへの復帰ボタン */
+#to_portfolio {
+    background-color: azure;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    color: black;
+    text-align: center;
+}
+
+#to_portfolio a {
+    display: block;
+}
+
+/* ポートフォリオへの復帰ボタン END */
