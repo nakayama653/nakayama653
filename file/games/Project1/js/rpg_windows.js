@@ -1082,6 +1082,7 @@ Window_Selectable.prototype.onTouch = function(triggered) {
     var hitIndex = this.hitTest(x, y);
     if (hitIndex >= 0) {
         if (hitIndex === this.index()) {
+
             if (triggered && this.isTouchOkEnabled()) {
                 this.processOk();
             }

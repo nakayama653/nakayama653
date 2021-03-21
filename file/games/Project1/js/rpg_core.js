@@ -6234,6 +6234,7 @@ ScreenSprite.prototype.setColor = function (r, g, b) {
         r = Math.round(r || 0).clamp(0, 255);
         g = Math.round(g || 0).clamp(0, 255);
         b = Math.round(b || 0).clamp(0, 255);
+
         this._red = r;
         this._green = g;
         this._blue = b;

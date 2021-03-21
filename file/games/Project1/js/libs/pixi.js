@@ -8799,6 +8799,7 @@ var Bounds = function () {
         maxY = y > maxY ? y : maxY;
 
 
+
         x = a * x1 + c * y1 + tx;
         y = b * x1 + d * y1 + ty;
         minX = x < minX ? x : minX;
@@ -38574,6 +38575,7 @@ var ParticleBuffer = function () {
 
         for (var i = 0; i < this.dynamicProperties.length; ++i) {
             var property = this.dynamicProperties[i];
+
 
 
             property.offset = dynamicOffset;
